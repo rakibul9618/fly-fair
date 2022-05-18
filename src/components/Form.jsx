@@ -45,31 +45,49 @@ const formData = [
 
 const Form = () => {
   return (
-    <Container>
-      <Box
-        component="span"
+    <div>
+      <Container
+        maxWidth="xl"
         sx={{
-          background: '#003566',
-          px: 2,
-          py: 1.5,
-          color: 'white',
-          borderRadius: '124.5px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          background: 'white',
+          width: { md: '95%', lg: '80%' },
+          boxShadow: '0 3px 10px rgb(0 0 0 / 0.2)',
+          py: 2,
         }}
       >
-        <Button variant="text" sx={{ color: 'white', mx: 9 }}>
-          One Way
-        </Button>
-        <MidButton variant="contained">Round trip</MidButton>
-        <Button variant="text" sx={{ color: 'white', mx: 9 }}>
-          Multi-City
-        </Button>
-      </Box>
-      <Box component="span" sx={{ p: 2, display: 'flex', flexWrap: 'wrap' }}>
-        {formData.map((data, index) => {
-          return <ShowInput data={data} key={index} />;
-        })}
-      </Box>
-    </Container>
+        <Box
+          component="span"
+          sx={{
+            width: { xs: '100%', sm: '90%', md: '80%', lg: '70%' },
+            background: '#003566',
+            px: 2,
+            py: 1.5,
+            color: 'white',
+            borderRadius: { xs: '8px', sm: '124.5px' },
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            flexWrap: 'wrap',
+            flexDirection: { xs: 'column', sm: 'row' },
+          }}
+        >
+          <Button variant="text" sx={{ color: 'white', px: { sm: 4, md: 9 } }}>
+            One Way
+          </Button>
+          <MidButton variant="contained">Round trip</MidButton>
+          <Button variant="text" sx={{ color: 'white', px: { sm: 4, md: 9 } }}>
+            Multi-City
+          </Button>
+        </Box>
+        <Box component="span" sx={{ p: 2, display: 'flex', flexWrap: 'wrap' }}>
+          {formData.map((data, index) => {
+            return <ShowInput data={data} key={index} />;
+          })}
+        </Box>
+      </Container>
+    </div>
   );
 };
 
