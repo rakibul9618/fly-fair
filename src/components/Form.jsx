@@ -3,7 +3,7 @@ import { Container } from '@mui/system';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
-import InputField from './InputField';
+import ShowInput from './ShowInput';
 
 const MidButton = styled(Button)({
   background: '#FFFF00',
@@ -64,9 +64,9 @@ const Form = () => {
           Multi-City
         </Button>
       </Box>
-      <Box component="span" sx={{ p: 2, display: 'flex' }}>
+      <Box component="span" sx={{ p: 2, display: 'flex', flexWrap: 'wrap' }}>
         {formData.map((data, index) => {
-          return <InputField data={data} key={index} />;
+          return <ShowInput data={data} key={index} />;
         })}
       </Box>
     </Container>
