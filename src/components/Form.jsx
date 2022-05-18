@@ -3,6 +3,7 @@ import { Container } from '@mui/system';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
+import InputField from './InputField';
 
 const MidButton = styled(Button)({
   background: '#FFFF00',
@@ -17,9 +18,30 @@ const MidButton = styled(Button)({
   },
 });
 
-const FormTag = styled('form')({
-  display: 'flex',
-});
+const formData = [
+  {
+    header: 'From',
+    placeholder: 'Enter city/airport name',
+  },
+  {
+    header: 'To',
+    placeholder: 'Enter city/airport name',
+  },
+  {
+    header: 'Departure Date',
+    placeholder: 'Departure Date',
+    logo: '',
+  },
+  {
+    header: 'Returning Date',
+    placeholder: 'Departure Date',
+    logo: '',
+  },
+  {
+    header: 'Passenger & Class',
+    placeholder: '1 Person <br /> Economy Class ',
+  },
+];
 
 const Form = () => {
   return (
@@ -43,53 +65,9 @@ const Form = () => {
         </Button>
       </Box>
       <Box component="span" sx={{ p: 2, display: 'flex' }}>
-        <FormTag onSubmit={(e) => e.preventDefault()}>
-          <div>
-            <label htmlFor="fromId">Form</label>
-            <input
-              type="text"
-              name="from"
-              id="fromId"
-              placeholder="Enter city / airport name"
-            />
-          </div>
-          <div>
-            <label htmlFor="fromId">To</label>
-            <input
-              type="text"
-              name="to"
-              id="toId"
-              placeholder="Enter city/airport name"
-            />
-          </div>
-          <div>
-            <label htmlFor="departureDateId">Departure Date</label>
-            <input
-              type="date"
-              id="departureDateId"
-              name="departureDate"
-              placeholder="Departure Date"
-            />
-          </div>
-          <div>
-            <label htmlFor="returningDate">Returning Date:</label>
-            <input
-              type="date"
-              id="returningDateId"
-              name="returningDate"
-              placeholder="Returning Date"
-            />
-          </div>
-          <div>
-            <label htmlFor="passengerAndClassId">Passenger & Class</label>
-            <input
-              type="text"
-              name="passengerAndClass"
-              id="passengerAndClassId"
-              placeholder="1 Person Economy Class"
-            />
-          </div>
-        </FormTag>
+        {formData.map((data, index) => {
+          return <InputField data={data} key={index} />;
+        })}
       </Box>
     </Container>
   );
