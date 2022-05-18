@@ -1,5 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+
 }
 .custom-appbar {
   box-shadow: none !important;
@@ -18,4 +20,6 @@ body {
   height: 677px;
   margin: 20px 0;
 }
-
+.airlines-list  {
+  overflow-x: auto ;
+}
