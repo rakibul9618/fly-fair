@@ -2,29 +2,36 @@
   width: 0px;
   background: transparent;
 }
+* {
+  /* outline: 2px solid red; */
+}
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.custom-appbar {
-  box-shadow: none !important;
+
+.active-item {
+  color: #003566 !important;
+  font-weight: 600 !important;
+}
+.active-item span:nth-child(1) {
+  height: 5px;
+  width: 5px;
+  background: #003566;
+  border-radius: 999px;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .sign-button:hover {
   background: #003566 !important;
   color: white;
-}
-
-.header-image {
-  background-image: url("./assets//images/header-image.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 677px;
-  margin: 20px 0;
 }
 
 .menu-list {
@@ -41,24 +48,24 @@ body {
   padding: 0 !important ;
 }
 .ceo-desk {
-  background-image: url("./assets/images/ceoDesk.png");
+  background-image: url('./assets/images/ceoDesk.png');
   width: 100%;
 }
 
 .slick-prev {
-    left: -57px;
+  left: -57px;
 }
 
 .slick-next {
-    right: -57px;
+  right: -57px;
 }
 
 .slick-prev:before {
-  content: url("./assets/images/angle-left-solid.svg");
+  content: url('./assets/images/angle-left-solid.svg');
 }
 
 .slick-next:before {
-  content: url("./assets/images/angle-right-solid.svg");
+  content: url('./assets/images/angle-right-solid.svg');
   width: 20px;
   height: 20px;
 }

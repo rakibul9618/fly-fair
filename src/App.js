@@ -1,29 +1,35 @@
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Form from "./components/Form";
-import AirlinesList from "./components/AirlinesList";
-import Service from "./components/Service";
-import SpecialService from "./components/SpecialService";
-import ChoiceUS from "./components/ChoiceUS";
-import CeoDesk from "./components/CeoDesk";
-import Footer from "./components/Footer";
-import { Container } from "@mui/material";
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Form from './components/Form';
+// import AirlinesList from './components/AirlinesList';
+import Service from './components/Service';
+import SpecialService from './components/SpecialService';
+import ChoiceUS from './components/ChoiceUS';
+import CeoDesk from './components/CeoDesk';
+import Footer from './components/Footer';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Poppins, sans-serif',
+  },
+});
 
 function App() {
   return (
-    <Container component="div">
+    <ThemeProvider theme={theme}>
       <Navbar />
-      <div style={{ position: "relative" }}>
+      <div style={{ position: 'relative' }}>
         <Header />
         <Form />
       </div>
-      <AirlinesList />
+      {/* <AirlinesList /> */}
       <Service />
       <SpecialService />
       <ChoiceUS />
       <CeoDesk />
       <Footer />
-    </Container>
+    </ThemeProvider>
   );
 }
 

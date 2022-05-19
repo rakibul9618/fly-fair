@@ -7,8 +7,7 @@ import ShowInput from './ShowInput';
 
 // images
 import calendar from '../assets/images/calendar.png';
-import transfer from '../assets/images/transfer.png';
-
+// import transfer from '../assets/images/transfer.png';
 
 const MidButton = styled(Button)({
   background: '#FFFF00',

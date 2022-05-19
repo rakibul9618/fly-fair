@@ -1,50 +1,83 @@
-import React from "react";
-import { Container } from "@mui/system";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
+import React from 'react';
+import { Container } from '@mui/system';
+import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+
+// images
+import headerImage from '../assets/images/header-image.png';
+import { Typography } from '@mui/material';
 
 const RegButton = styled(Button)({
-  background: "#FFFF00",
-  color: "black",
-  fontWeight: "600",
-  fontSize: { xs: "8px", sm: "15px" },
-  "&:hover": {
-    backgroundColor: "#198754",
-    color: "white",
+  background: '#FFFF00',
+  color: 'black',
+
+  fontWeight: '600',
+  '&:hover': {
+    backgroundColor: '#198754',
+    color: 'white',
   },
 });
 
 const Header = () => {
   return (
-    <Container
-      maxWidth="xl"
-      className="header-image"
-      sx={{
-        display: "flex",
-        justifyContent: { xs: "center", md: "start" },
-        alignItems: "center",
-        borderRadius: "16px",
-        textAlign: { xs: "center", md: "start" },
-      }}
-    >
-      <Box
-        component="div"
+    <Container component="div">
+      <Container
+        maxWidth="xl"
         sx={{
-          p: 2,
-          color: "white",
-          width: { xs: "100%", md: "50%", lg: "40%", xl: "50%" },
+          display: 'flex',
+          justifyContent: { xs: 'center', md: 'start' },
+          alignItems: 'center',
+          borderRadius: '16px',
+          textAlign: { xs: 'center', md: 'start' },
+          marginTop: { xs: '10px', xl: '20px' },
+          backgroundImage: `url(${headerImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          height: { xs: '400px', md: '677px' },
         }}
       >
-        <h1 style={{ color: "white" }}>One Platform, All Travel Solutions.</h1>
-        <p>
-          Bangladesh’s most comprehensive B2B portal for You. In publishing and
-          graphic design, Lorem ipsum is a placeholder text commonly used to
-          demonstrate the visual form of a document or a typeface without
-          relying on.
-        </p>
-        <RegButton variant="contained">Regester now as a Agent</RegButton>
-      </Box>
+        <Box
+          component="div"
+          sx={{
+            p: 2,
+            color: 'white',
+            width: { xs: '100%', md: '50%', lg: '40%', xl: '50%' },
+          }}
+        >
+          <Typography
+            Container="h1"
+            sx={{
+              color: 'white',
+              fontSize: { xs: '20px', sm: '30px', md: '50px' },
+            }}
+          >
+            One Platform, All Travel Solutions.
+          </Typography>
+          <Typography
+            Container="p"
+            sx={{
+              py: 2,
+              px: { xs: 2, sm: 4, md: 0 },
+              fontSize: { xs: '12px', sm: '15px' },
+            }}
+          >
+            Bangladesh’s most comprehensive B2B portal for You. In publishing
+            and graphic design, Lorem ipsum is a placeholder text commonly used
+            to demonstrate the visual form of a document or a typeface without
+            relying on.
+          </Typography>
+          <RegButton
+            sx={{
+              fontSize: { xs: '12px', sm: '16px', md: '20px' },
+              px: { xs: 2, sm: 3 },
+            }}
+          >
+            Register now as a Agent
+          </RegButton>
+        </Box>
+      </Container>
     </Container>
   );
 };
