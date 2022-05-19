@@ -5,6 +5,10 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import ShowInput from './ShowInput';
 
+// images
+import calendar from '../assets/images/calendar.png';
+import transfer from '../assets/images/transfer.png';
+
 const MidButton = styled(Button)({
   background: '#FFFF00',
   color: 'black',
@@ -30,16 +34,28 @@ const formData = [
   {
     header: 'Departure Date',
     placeholder: 'Departure Date',
-    logo: '',
+    logo: (
+      <img
+        style={{ paddingRight: '10px' }}
+        src={calendar}
+        alt="calender logo"
+      />
+    ),
   },
   {
     header: 'Returning Date',
     placeholder: 'Departure Date',
-    logo: '',
+    logo: (
+      <img
+        style={{ paddingRight: '10px' }}
+        src={calendar}
+        alt="calender logo"
+      />
+    ),
   },
   {
     header: 'Passenger & Class',
-    placeholder: '1 Person <br /> Economy Class ',
+    placeholder: '1 Person Economy Class',
   },
 ];
 
@@ -81,7 +97,17 @@ const Form = () => {
             Multi-City
           </Button>
         </Box>
-        <Box component="span" sx={{ p: 2, display: 'flex', flexWrap: 'wrap' }}>
+        <Box
+          component="span"
+          sx={{
+            p: 2,
+            display: 'flex',
+            flexWrap: 'wrap',
+            flexDirection: { xs: 'column', sm: 'row' },
+            justifyContent: { sm: 'space-between', md: 'center' },
+            alignItems: 'center',
+          }}
+        >
           {formData.map((data, index) => {
             return <ShowInput data={data} key={index} />;
           })}

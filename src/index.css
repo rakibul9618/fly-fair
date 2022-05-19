@@ -23,3 +23,7 @@ body {
 .airlines-list  {
   overflow-x: auto ;
 }
+.form-placeholder {
+  display: flex;
+  align-items: center;
+}
