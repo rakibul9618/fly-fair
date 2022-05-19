@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { Box, Container } from '@mui/system';
 import ChoiceUsCard from './ChoiceUsCard';
 import styled from '@emotion/styled';
@@ -119,9 +119,4 @@ const ChoiceUS = () => {
 
 export default ChoiceUS;
 
-{
-  /* <Box component="div" sx={{ display: 'flex', alignItems: 'center' }}>
-        {choiceUsData.map((data, index) => {
-          return <ChoiceUsCard data={data} key={index} />;
-        })} */
-}
+
