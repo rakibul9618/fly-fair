@@ -1,7 +1,14 @@
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
-
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 .custom-appbar {
   box-shadow: none !important;
@@ -20,10 +27,11 @@ body {
   height: 677px;
   margin: 20px 0;
 }
-.airlines-list  {
-  overflow-x: auto ;
+.airlines-list {
+  overflow-x: auto;
 }
 .form-placeholder {
   display: flex;
   align-items: center;
 }
+

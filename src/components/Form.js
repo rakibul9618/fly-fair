@@ -9,6 +9,7 @@ import ShowInput from './ShowInput';
 import calendar from '../assets/images/calendar.png';
 import transfer from '../assets/images/transfer.png';
 
+
 const MidButton = styled(Button)({
   background: '#FFFF00',
   color: 'black',
@@ -16,6 +17,21 @@ const MidButton = styled(Button)({
   fontSize: '15px',
   borderRadius: '124.5px',
   padding: '5px 35px',
+  '&:hover': {
+    backgroundColor: '#198754',
+    color: 'white',
+  },
+});
+
+const SearchFlight = styled(Button)({
+  background: '#003566',
+  color: 'white',
+  fontWeight: '600',
+  fontSize: '15px',
+  borderRadius: '124.5px',
+  padding: '15px 35px',
+  position: 'absolute',
+  bottom: '-25px',
   '&:hover': {
     backgroundColor: '#198754',
     color: 'white',
@@ -61,7 +77,13 @@ const formData = [
 
 const Form = () => {
   return (
-    <div>
+    <Container
+      maxWidth="xl"
+      sx={{
+        position: { xs: 'relative', sm: 'absolute' },
+        top: { xs: '0%', sm: '510px' },
+      }}
+    >
       <Container
         maxWidth="xl"
         sx={{
@@ -71,7 +93,8 @@ const Form = () => {
           background: 'white',
           width: { md: '95%', lg: '80%' },
           boxShadow: '0 3px 10px rgb(0 0 0 / 0.2)',
-          py: 2,
+          py: 6,
+          position: 'relative',
         }}
       >
         <Box
@@ -105,15 +128,16 @@ const Form = () => {
             flexWrap: 'wrap',
             flexDirection: { xs: 'column', sm: 'row' },
             justifyContent: { sm: 'space-between', md: 'center' },
-            alignItems: 'center',
+            alignItems: { xs: 'start', sm: 'center' },
           }}
         >
           {formData.map((data, index) => {
             return <ShowInput data={data} key={index} />;
           })}
         </Box>
+        <SearchFlight>Search Flight</SearchFlight>
       </Container>
-    </div>
+    </Container>
   );
 };
 
