@@ -7,15 +7,13 @@ import ShowInput from './ShowInput';
 
 // images
 import calendar from '../assets/images/calendar.png';
-// import transfer from '../assets/images/transfer.png';
+import transfer from '../assets/images/transfer.png';
+import search from '../assets/images/search.png';
 
-const MidButton = styled(Button)({
+const RoundTrip = styled(Button)({
   background: '#FFFF00',
   color: 'black',
   fontWeight: '600',
-  fontSize: '15px',
-  borderRadius: '124.5px',
-  padding: '5px 35px',
   '&:hover': {
     backgroundColor: '#198754',
     color: 'white',
@@ -25,12 +23,7 @@ const MidButton = styled(Button)({
 const SearchFlight = styled(Button)({
   background: '#003566',
   color: 'white',
-  fontWeight: '600',
-  fontSize: '15px',
   borderRadius: '124.5px',
-  padding: '15px 35px',
-  position: 'absolute',
-  bottom: '-25px',
   '&:hover': {
     backgroundColor: '#198754',
     color: 'white',
@@ -79,8 +72,9 @@ const Form = () => {
     <Container
       maxWidth="xl"
       sx={{
-        position: { xs: 'relative', sm: 'absolute' },
-        top: { xs: '0%', sm: '510px' },
+        position: { xs: 'relative', md: 'absolute' },
+        top: { xs: '50px', md: '560px', xl: '518px' },
+        left: 0,
       }}
     >
       <Container
@@ -89,52 +83,105 @@ const Form = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          width: { md: '75%', xl: '80%' },
           background: 'white',
-          width: { md: '95%', lg: '80%' },
           boxShadow: '0 3px 10px rgb(0 0 0 / 0.2)',
-          py: 6,
+          py: 3,
           position: 'relative',
+          paddingBottom: '70px',
         }}
       >
         <Box
-          component="span"
+          component="div"
           sx={{
             width: { xs: '100%', sm: '90%', md: '80%', lg: '70%' },
             background: '#003566',
-            px: 2,
-            py: 1.5,
+            px: '5px',
+            py: '2px',
             color: 'white',
             borderRadius: { xs: '8px', sm: '124.5px' },
             display: 'flex',
-            justifyContent: 'space-evenly',
-            flexWrap: 'wrap',
-            flexDirection: { xs: 'column', sm: 'row' },
+            justifyContent: 'space-around',
           }}
         >
-          <Button variant="text" sx={{ color: 'white', px: { sm: 4, md: 9 } }}>
+          <Button
+            variant="text"
+            sx={{
+              color: 'white',
+              padding: { xs: '3px 4px', sm: '6px 25px', md: '8px 20px' },
+              fontSize: { xs: '13px', sm: '16px', md: '18px' },
+            }}
+            className="btn-hover"
+          >
             One Way
           </Button>
-          <MidButton variant="contained">Round trip</MidButton>
-          <Button variant="text" sx={{ color: 'white', px: { sm: 4, md: 9 } }}>
+          <RoundTrip
+            sx={{
+              padding: { xs: '3px 8px', sm: '6px 25px', md: '8px 40px' },
+              fontSize: { xs: '13px', sm: '16px', md: '18px' },
+              background: '#FFFF00',
+              color: 'black',
+              fontWeight: '600',
+              borderRadius: '124.5px',
+            }}
+          >
+            Round trip
+          </RoundTrip>
+          <Button
+            variant="text"
+            sx={{
+              color: 'white',
+              padding: { xs: '3px 4px', sm: '6px 25px', md: '8px 20px' },
+              fontSize: { xs: '13px', sm: '16px', md: '18px' },
+            }}
+          >
             Multi-City
           </Button>
         </Box>
         <Box
-          component="span"
+          component="div"
           sx={{
-            p: 2,
+            width: { xs: '100%' },
+            p: { xs: 1 },
             display: 'flex',
             flexWrap: 'wrap',
+            justifyContent: { sm: 'center', xl: 'space-between' },
             flexDirection: { xs: 'column', sm: 'row' },
-            justifyContent: { sm: 'space-between', md: 'center' },
-            alignItems: { xs: 'start', sm: 'center' },
+            position: 'relative',
           }}
         >
           {formData.map((data, index) => {
             return <ShowInput data={data} key={index} />;
           })}
+          <Box
+            component="img"
+            sx={{
+              position: 'absolute',
+              display: { xs: 'none', sm: 'block' },
+              top: { sm: '19%', lg: '27%', xl: '26%' },
+              left: { sm: '40%', lg: '27%', xl: '17%' },
+            }}
+            src={transfer}
+            alt="logo"
+          />
         </Box>
-        <SearchFlight>Search Flight</SearchFlight>
+        <SearchFlight
+          sx={{
+            padding: { xs: '8px 20px', sm: '11px 30px' },
+            display: 'flex',
+            alignItems: 'center',
+            position: 'absolute',
+            bottom: { xs: '-15px', sm: '-21px' },
+          }}
+        >
+          <Box
+            component="img"
+            src={search}
+            alt="search icon"
+            sx={{ paddingRight: '10px' }}
+          />
+          Search Flight
+        </SearchFlight>
       </Container>
     </Container>
   );

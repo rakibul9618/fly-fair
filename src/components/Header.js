@@ -32,7 +32,7 @@ const Header = () => {
           textAlign: { xs: 'center', md: 'start' },
           marginTop: { xs: '10px', xl: '20px' },
           backgroundImage: `url(${headerImage})`,
-          backgroundSize: 'cover',
+          backgroundSize: { xs: 'cover', xl: 'contain' },
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           height: { xs: '400px', md: '677px' },
@@ -50,7 +50,7 @@ const Header = () => {
             Container="h1"
             sx={{
               color: 'white',
-              fontSize: { xs: '20px', sm: '30px', md: '50px' },
+              fontSize: { xs: '20px', sm: '30px', md: '40px' },
             }}
           >
             One Platform, All Travel Solutions.

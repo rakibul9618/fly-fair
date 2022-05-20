@@ -8,6 +8,7 @@ import ChoiceUS from './components/ChoiceUS';
 import CeoDesk from './components/CeoDesk';
 import Footer from './components/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Container } from '@mui/system';
 
 const theme = createTheme({
   typography: {
@@ -19,16 +20,18 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <div style={{ position: 'relative' }}>
+      <Container
+        sx={{ position: 'relative', padding: '0px', marginBottom: '500px' }}
+      >
         <Header />
         <Form />
-      </div>
+      </Container>
       {/* <AirlinesList /> */}
-      <Service />
-      <SpecialService />
-      <ChoiceUS />
-      <CeoDesk />
-      <Footer />
+      {/* <Service /> */}
+      {/* <SpecialService /> */}
+      {/* <ChoiceUS /> */}
+      {/* <CeoDesk /> */}
+      {/* <Footer /> */}
     </ThemeProvider>
   );
 }

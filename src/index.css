@@ -14,6 +14,7 @@ body {
   box-sizing: border-box;
 }
 
+
 .active-item {
   color: #003566 !important;
   font-weight: 600 !important;
@@ -41,8 +42,8 @@ body {
   overflow-x: auto;
 }
 .form-placeholder {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
 }
 .ceo-container {
   padding: 0 !important ;
