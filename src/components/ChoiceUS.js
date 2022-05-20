@@ -12,6 +12,8 @@ const choiceUsData = [
     color: ' #5591BB',
     maxWidth: '212px',
     maxHeight: '183px',
+    minHeight: '111px',
+    minWidth: '140px',
   },
   {
     header: '10,250+',
@@ -20,6 +22,8 @@ const choiceUsData = [
     color: ' #4CD4AB',
     maxWidth: '298px',
     maxHeight: '246px',
+    minHeight: '174px',
+    minWidth: '226px',
   },
   {
     header: '60k+',
@@ -28,6 +32,8 @@ const choiceUsData = [
     color: ' #878CFF',
     maxWidth: '298px',
     maxHeight: '246px',
+    minHeight: '174px',
+    minWidth: '226px',
   },
   {
     header: '120+ Agent',
@@ -36,6 +42,8 @@ const choiceUsData = [
     color: ' #81B3FF',
     maxWidth: '212px',
     maxHeight: '183px',
+    minHeight: '111px',
+    minWidth: '140px',
   },
 ];
 
@@ -58,7 +66,7 @@ const ChoiceUS = () => {
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'center',
+        justifyContent: { xs: 'center', md: 'space-between' },
         alignItems: 'center',
         my: 8,
       }}
@@ -69,7 +77,7 @@ const ChoiceUS = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          width: { xs: '100%', md: '80%', lg: '54%' },
+          width: { xs: '100%', md: '45%', lg: '54%' },
           flexWrap: 'wrap',
         }}
       >
@@ -79,17 +87,17 @@ const ChoiceUS = () => {
       </Box>
       <Box
         sx={{
-          width: { xs: '100%', lg: '44%' },
+          width: { xs: '100%', md: '40%', lg: '44%' },
           paddingLeft: '20px',
           my: 8,
-          textAlign: { xs: 'center', lg: 'start' },
+          textAlign: { xs: 'center', md: 'start' },
         }}
       >
         <Box
           sx={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: { xs: 'center', lg: 'start' },
+            justifyContent: { xs: 'center', md: 'start' },
           }}
         >
           <Box
@@ -108,14 +116,19 @@ const ChoiceUS = () => {
         <Typography
           component="h1"
           sx={{
-            fontSize: { xs: '22px', sm: '26px', md: '45px' },
-            py: 2,
+            fontSize: { xs: '22px', sm: '30px', lg: '45px' },
+            py: { xs: 2, md: 1, lg: 2 },
           }}
         >
           Buy Air Ticket With{' '}
           <span style={{ fontWeight: 'bold' }}>Lowest Price.</span>
         </Typography>
-        <Typography sx={{ py: 5 }}>
+        <Typography
+          sx={{
+            paddingBottom: '30px',
+            fontSize: { xs: '16px', md: '14px', lg: '16px' },
+          }}
+        >
           In publishing and graphic design, Lorem ipsum is a placeholder text
           commonly used to demonstrate the visual form of a document or a
           typeface without relying on meaningful content. Lorem ipsum may be

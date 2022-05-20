@@ -33,7 +33,7 @@ const SpecialService = () => {
       <Box
         component="div"
         sx={{
-          width: { md: '48%' },
+          width: { xs: '100%', md: '48%' },
           px: '20px',
           my: 8,
           textAlign: { xs: 'center', md: 'start' },
@@ -83,7 +83,7 @@ const SpecialService = () => {
         component="img"
         src={ticketImg}
         alt="a desktop"
-        sx={{ width: { sm: '70%', md: '47%' } }}
+        sx={{ width: { xs: '90%', sm: '70%', md: '47%' } }}
       />
     </Container>
   );

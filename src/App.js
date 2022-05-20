@@ -20,9 +20,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <Container
-        sx={{ position: 'relative', padding: '0px', marginBottom: '500px' }}
-      >
+      <Container maxWidth="xl" sx={{ position: 'relative', padding: '0px' }}>
         <Header />
         <Form />
       </Container>

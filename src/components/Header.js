@@ -21,7 +21,7 @@ const RegButton = styled(Button)({
 
 const Header = () => {
   return (
-    <Container component="div">
+    <Container maxWidth="xl" component="div">
       <Container
         maxWidth="xl"
         sx={{
@@ -32,7 +32,7 @@ const Header = () => {
           textAlign: { xs: 'center', md: 'start' },
           marginTop: { xs: '10px', xl: '20px' },
           backgroundImage: `url(${headerImage})`,
-          backgroundSize: { xs: 'cover', xl: 'contain' },
+          backgroundSize: { xs: 'cover'},
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           height: { xs: '400px', md: '677px' },
@@ -43,14 +43,15 @@ const Header = () => {
           sx={{
             p: 2,
             color: 'white',
-            width: { xs: '100%', md: '50%', lg: '40%', xl: '50%' },
+            width: { xs: '100%', md: '70%', lg: '50%'},
+            marginLeft: 4
           }}
         >
           <Typography
             Container="h1"
             sx={{
               color: 'white',
-              fontSize: { xs: '20px', sm: '30px', md: '40px' },
+              fontSize: { xs: '20px', sm: '30px', md: '40px',lg: '55px' },
             }}
           >
             One Platform, All Travel Solutions.
@@ -59,7 +60,7 @@ const Header = () => {
             Container="p"
             sx={{
               py: 2,
-              px: { xs: 2, sm: 4, md: 0 },
+              px: { xs: 1, sm: 2, md: 0 },
               fontSize: { xs: '12px', sm: '15px' },
             }}
           >

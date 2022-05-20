@@ -7,7 +7,7 @@ const ShowInput = ({ data }) => {
       component="div"
       sx={{
         padding: { xs: '5px 15px 5px 0px', xl: '5px 10px' },
-        width: { sm: '46%', lg: '30%', xl: 'auto' },
+        width: { sm: '46%', lg: '30%', xl: '18%' },
       }}
     >
       <Typography
