@@ -36,10 +36,9 @@ const ResponsiveAppBar = () => {
             <Typography
               variant="h6"
               noWrap
-              component="a"
-              href="/"
+              component="div"
               sx={{
-                mr: {md: '60px', lg: '100px' },
+                mr: { md: '60px', lg: '100px' },
                 display: { xs: 'flex' },
                 fontFamily: 'monospace',
                 fontWeight: 700,
@@ -49,11 +48,13 @@ const ResponsiveAppBar = () => {
                 width: { xs: '100%', md: 'auto' },
               }}
             >
-              <img
+              <Box
+                component="img"
                 src={logo}
                 alt="fly fair international logo"
-                width="100"
-                height="40"
+                width="100px"
+                height="40px"
+                sx={{ paddingLeft: { xs: 0, sm: '' } }}
               />
             </Typography>
 
@@ -76,8 +77,8 @@ const ResponsiveAppBar = () => {
                   borderRadius: 1,
                   padding: '5px 10px',
                   fontSize: 'px',
+                  marginRight: '-20px',
                 }}
-                className="icon-button"
               >
                 <MenuIcon />
               </IconButton>

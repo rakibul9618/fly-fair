@@ -66,9 +66,9 @@ const ChoiceUS = () => {
       sx={{
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: { xs: 'center', md: 'space-between' },
+        justifyContent: { xs: 'center', md: 'center' },
         alignItems: 'center',
-        my: 8,
+        my: { sm: 8 , md: 0},
       }}
     >
       <Box
@@ -77,7 +77,7 @@ const ChoiceUS = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          width: { xs: '100%', md: '45%', lg: '54%' },
+          width: { xs: '100%', md: '57%', lg: '54%' },
           flexWrap: 'wrap',
         }}
       >

@@ -14,7 +14,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .active-item {
   color: #003566 !important;
   font-weight: 600 !important;
@@ -47,20 +46,29 @@ body {
   width: 100%;
 }
 
-.slick-prev {
-  left: -57px;
+
+.slick-slider {
+  height: 80px !important;
 }
 
-.slick-next {
-  right: -57px;
+.carousel-div {
+  display: grid !important;
+  place-items: center;
+
 }
 
 .slick-prev:before {
   content: url('./assets/images/angle-left-solid.svg');
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 14px;
+  height: 26px;
 }
 
 .slick-next:before {
   content: url('./assets/images/angle-right-solid.svg');
-  width: 20px;
-  height: 20px;
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 14px;
+  height: 26px;
 }

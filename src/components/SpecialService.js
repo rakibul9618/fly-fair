@@ -23,7 +23,6 @@ const SpecialService = () => {
     <Container
       maxWidth="xl"
       sx={{
-        my: 8,
         display: 'flex',
         flexWrap: { xs: 'wrap', lg: 'nowrap' },
         justifyContent: { xs: 'center', md: 'space-between' },
@@ -35,7 +34,7 @@ const SpecialService = () => {
         sx={{
           width: { xs: '100%', md: '48%' },
           px: '20px',
-          my: 8,
+          marginBottom: 8,
           textAlign: { xs: 'center', md: 'start' },
         }}
       >
