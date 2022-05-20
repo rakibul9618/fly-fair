@@ -32,7 +32,7 @@ const Header = () => {
           textAlign: { xs: 'center', md: 'start' },
           marginTop: { xs: '10px', xl: '20px' },
           backgroundImage: `url(${headerImage})`,
-          backgroundSize: { xs: 'cover'},
+          backgroundSize: { xs: 'cover' },
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           height: { xs: '400px', md: '677px' },
@@ -43,15 +43,15 @@ const Header = () => {
           sx={{
             p: 2,
             color: 'white',
-            width: { xs: '100%', md: '70%', lg: '50%'},
-            marginLeft: 4
+            width: { xs: '100%', md: '70%', lg: '50%' },
+            marginLeft: { xs: 0, md: 4 },
           }}
         >
           <Typography
             Container="h1"
             sx={{
               color: 'white',
-              fontSize: { xs: '20px', sm: '30px', md: '40px',lg: '55px' },
+              fontSize: { xs: '20px', sm: '30px', md: '40px', lg: '55px' },
             }}
           >
             One Platform, All Travel Solutions.

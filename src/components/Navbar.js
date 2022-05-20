@@ -30,7 +30,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <Container>
-      <AppBar position="static" color="transparent" sx={{ boxShadow: 'none' }}>
+      <AppBar position="static" color="transparent" sx={{ boxShadow: 'none',py:2 }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters sx={{ display: 'flex' }}>
             <Typography

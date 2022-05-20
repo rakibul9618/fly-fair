@@ -235,8 +235,9 @@ const Footer = () => {
           color: '#434343',
           fontSize: '14px',
           px: 2,
-          paddingBottom: 4,
+          paddingBottom: 6,
           textAlign: 'center',
+          margin: 0,
         }}
       >
         @All Right Reserved By Fly Far International & Developed By FLy Far Tech
