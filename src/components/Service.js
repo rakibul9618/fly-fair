@@ -43,14 +43,30 @@ const Service = () => {
             justifyContent: 'center',
           }}
         >
-          <dir
-            style={{ height: '0px', width: '26px', border: '1px solid black' }}
-          ></dir>
-          <Typography sx={{ fontSize: '15px', paddingLeft: '8px' }}>
+          <Box
+            component="div"
+            sx={{
+              height: '0px',
+              width: '26px',
+              border: '1px solid black',
+              background: 'black',
+            }}
+          ></Box>
+          <Typography
+            component="p"
+            sx={{ fontSize: '15px', paddingLeft: '8px' }}
+          >
             Our Service
           </Typography>
         </Box>
-        <Typography sx={{ fontSize: '45px', textAlign: 'center' }}>
+        <Typography
+          component="h1"
+          sx={{
+            fontSize: { xs: '22px', sm: '26px', md:'45px' },
+            textAlign: 'center',
+            py: 2,
+          }}
+        >
           What We Are Offering?
         </Typography>
       </Box>

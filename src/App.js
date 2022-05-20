@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Form from './components/Form';
-// import AirlinesList from './components/AirlinesList';
+import AirlinesList from './components/AirlinesList';
 import Service from './components/Service';
 import SpecialService from './components/SpecialService';
 import ChoiceUS from './components/ChoiceUS';
@@ -27,11 +27,11 @@ function App() {
         <Form />
       </Container>
       {/* <AirlinesList /> */}
-      {/* <Service /> */}
-      {/* <SpecialService /> */}
-      {/* <ChoiceUS /> */}
-      {/* <CeoDesk /> */}
-      {/* <Footer /> */}
+      <Service />
+      <SpecialService />
+      <ChoiceUS />
+      <CeoDesk />
+      <Footer />
     </ThemeProvider>
   );
 }

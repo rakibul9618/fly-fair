@@ -59,7 +59,7 @@ const ChoiceUS = () => {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        alitgnItems: 'center',
+        alignItems: 'center',
         my: 8,
       }}
     >
@@ -92,14 +92,26 @@ const ChoiceUS = () => {
             justifyContent: { xs: 'center', lg: 'start' },
           }}
         >
-          <dir
-            style={{ height: '0px', width: '26px', border: '1px solid black' }}
-          ></dir>
+          <Box
+            component="div"
+            sx={{
+              height: '0px',
+              width: '26px',
+              border: '1px solid black',
+              background: 'black',
+            }}
+          ></Box>
           <Typography sx={{ fontSize: '15px', paddingLeft: '8px' }}>
             Our Special Service
           </Typography>
         </Box>
-        <Typography sx={{ fontSize: '45px' }}>
+        <Typography
+          component="h1"
+          sx={{
+            fontSize: { xs: '22px', sm: '26px', md: '45px' },
+            py: 2,
+          }}
+        >
           Buy Air Ticket With{' '}
           <span style={{ fontWeight: 'bold' }}>Lowest Price.</span>
         </Typography>
@@ -118,5 +130,3 @@ const ChoiceUS = () => {
 };
 
 export default ChoiceUS;
-
-

@@ -7,9 +7,20 @@ import { CardActionArea } from '@mui/material';
 
 const ServiceCard = ({ data }) => {
   return (
-    <Card sx={{ maxWidth: 345, margin: '20px 10px' }}>
+    <Card
+      sx={{
+        maxWidth: { xs: 275 },
+        margin: '20px 10px',
+        boxShadow: 'none',
+      }}
+    >
       <CardActionArea>
-        <CardMedia component="img" image={data.img} alt="green iguana" />
+        <CardMedia
+          component="img"
+          image={data.img}
+          alt="green iguana"
+          sx={{ width: '100%' }}
+        />
         <CardContent>
           <Typography
             gutterBottom

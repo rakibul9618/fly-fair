@@ -22,34 +22,54 @@ const SpecialService = () => {
   return (
     <Container
       maxWidth="xl"
-      sx={{ my: 8, display: 'flex', flexWrap: { xs: 'wrap', lg: 'nowrap' } }}
+      sx={{
+        my: 8,
+        display: 'flex',
+        flexWrap: { xs: 'wrap', lg: 'nowrap' },
+        justifyContent: { xs: 'center', md: 'space-between' },
+        alignItems: 'center',
+      }}
     >
       <Box
+        component="div"
         sx={{
-          paddingRight: '20px',
+          width: { md: '48%' },
+          px: '20px',
           my: 8,
-          textAlign: { xs: 'center', lg: 'start' },
+          textAlign: { xs: 'center', md: 'start' },
         }}
       >
         <Box
           sx={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: { xs: 'center', lg: 'start' },
+            justifyContent: { xs: 'center', md: 'start' },
           }}
         >
-          <dir
-            style={{ height: '0px', width: '26px', border: '1px solid black' }}
-          ></dir>
+          <Box
+            component="div"
+            sx={{
+              height: '0px',
+              width: '26px',
+              border: '1px solid black',
+              background: 'black',
+            }}
+          ></Box>
           <Typography sx={{ fontSize: '15px', paddingLeft: '8px' }}>
             Our Special Service
           </Typography>
         </Box>
-        <Typography sx={{ fontSize: '45px' }}>
+        <Typography
+          component="h1"
+          sx={{
+            fontSize: { xs: '22px', sm: '26px', md: '30px', lg: '40px' },
+            py: 2,
+          }}
+        >
           Buy Air Ticket With{' '}
           <span style={{ fontWeight: 'bold' }}>Lowest Price.</span>
         </Typography>
-        <Typography sx={{ py: 5 }}>
+        <Typography sx={{ paddingBottom: '30px' }}>
           In publishing and graphic design, Lorem ipsum is a placeholder text
           commonly used to demonstrate the visual form of a document or a
           typeface without relying on meaningful content. Lorem ipsum may be
@@ -59,7 +79,12 @@ const SpecialService = () => {
         </Typography>
         <GetTicket variant="contained">Get My Ticket Now</GetTicket>
       </Box>
-      <img src={ticketImg} alt="a desktop" width="100%" />
+      <Box
+        component="img"
+        src={ticketImg}
+        alt="a desktop"
+        sx={{ width: { sm: '70%', md: '47%' } }}
+      />
     </Container>
   );
 };

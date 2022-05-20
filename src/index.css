@@ -35,16 +35,10 @@ body {
   color: white;
 }
 
-.menu-list {
-  /* left: 182px !important; */
-}
 .airlines-list {
   overflow-x: auto;
 }
-.form-placeholder {
-  /* display: flex;
-  align-items: center; */
-}
+
 .ceo-container {
   padding: 0 !important ;
 }
