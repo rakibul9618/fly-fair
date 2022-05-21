@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/system";
+import { Box } from "@mui/system";
 import React from "react";
 import facebook from "../assets/images/facebook.png";
 import youtube from "../assets/images/youtube.png";
@@ -51,8 +51,7 @@ const para = [
 
 const Footer = () => {
   return (
-    <Container
-      maxWidth="xl"
+    <Box
       sx={{
         padding: 0,
         background: "#ECF0FB",
@@ -66,9 +65,13 @@ const Footer = () => {
           display: "flex",
           justifyContent: { xs: "space-around", xl: "space-between" },
           flexWrap: "wrap",
+          px: { xs: "20px", sm: "30px", md: "40px", lg: "60px", xl: "100px" },
         }}
       >
-        <Box component="div" sx={{ padding: { xs: 2, lg: '10px 25px', xl: "16px 30px" } }}>
+        <Box
+          component="div"
+          sx={{ padding: { xs: 2, lg: "30px 20px", xl: "16px 10px" } }}
+        >
           <Box component="img" src={logo} alt="logo" />
           <Box component="div" sx={{ py: 1 }}>
             {socialIcon.map((value, index) => {
@@ -84,7 +87,10 @@ const Footer = () => {
             })}
           </Box>
         </Box>
-        <Box component="div" sx={{ padding: { xs: 2, lg: '10px 25px', xl: "16px 30px" } }}>
+        <Box
+          component="div"
+          sx={{ padding: { xs: 2, lg: "30px 20px", xl: "16px 10px" } }}
+        >
           <Typography
             component="h1"
             sx={{
@@ -111,7 +117,7 @@ const Footer = () => {
         <Box
           component="div"
           sx={{
-            padding: { xs: 2, lg: '10px 25px', xl: "16px 30px" },
+            padding: { xs: 2, lg: "30px 20px", xl: "16px 10px" },
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -133,7 +139,7 @@ const Footer = () => {
         <Box
           component="div"
           sx={{
-            padding: { xs: 2, lg: '10px 25px', xl: "16px 30px" },
+            padding: { xs: 2, lg: "30px 20px", xl: "16px 10px" },
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -160,7 +166,7 @@ const Footer = () => {
         <Box
           component="div"
           sx={{
-            padding: { xs: 2, lg: '10px 25px', xl: "16px 30px" },
+            padding: { xs: 2, lg: "30px 20px", xl: "16px 10px" },
             alignItems: "center",
           }}
         >
@@ -180,8 +186,11 @@ const Footer = () => {
         <Box
           component="div"
           sx={{
-            padding: { xs: 2, lg: '10px 25px', xl: "16px 30px" },
-            alignItems: "center",
+            padding: { xs: 2, lg: "30px 20px", xl: "16px 10px" },
+            display: "flex",
+            flexDirection: "column",
+            alignItems: { xs: "center", xl: "start" },
+            px: { lg: "117px", xl: "" },
           }}
         >
           <Typography
@@ -197,7 +206,12 @@ const Footer = () => {
           </Typography>
           <Typography
             component="p"
-            sx={{ fontSize: "16px", color: "#636363", width: "283px" }}
+            sx={{
+              fontSize: "16px",
+              color: "#636363",
+              width: "283px",
+              textAlign: { xs: "center", xl: "start" },
+            }}
           >
             It is a long established fact that a reader will be by content.
           </Typography>
@@ -253,9 +267,24 @@ const Footer = () => {
           }}
         ></Box>
       </Box>
-      <Box component="div" sx={{ p: 2, marginTop: "40px" }}>
-        <img src={footer} alt="Different getrway of payment" width="100%" />
+      <Box
+        component="div"
+        sx={{ display: "flex", justifyContent: "center", px: { xs: 3, sm: 5 } }}
+      >
+        <Box
+          component="img"
+          src={footer}
+          alt="Different getrway of payment"
+          sx={{
+            p: 2,
+            marginTop: "40px",
+            width: "100%",
+            maxWidth: "1220px",
+            margin: "",
+          }}
+        />
       </Box>
+
       <Box
         component="p"
         sx={{
@@ -269,7 +298,7 @@ const Footer = () => {
       >
         @All Right Reserved By Fly Far International & Developed By FLy Far Tech
       </Box>
-    </Container>
+    </Box>
   );
 };
 
