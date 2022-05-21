@@ -1,18 +1,18 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 
 // Import css files
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // images
-import c1 from '../assets/images/c1.png';
-import c2 from '../assets/images/c2.png';
-import c3 from '../assets/images/c3.png';
-import c4 from '../assets/images/c4.png';
-import c5 from '../assets/images/c5.png';
-import { Box, Container } from '@mui/system';
-import { Typography } from '@mui/material';
+import c1 from "../assets/images/c1.png";
+import c2 from "../assets/images/c2.png";
+import c3 from "../assets/images/c3.png";
+import c4 from "../assets/images/c4.png";
+import c5 from "../assets/images/c5.png";
+import { Box, Container } from "@mui/system";
+import { Typography } from "@mui/material";
 
 const images = [c1, c2, c3, c4, c5, c1, c2, c3, c4, c5, c1, c2, c3, c4, c5];
 
@@ -23,8 +23,8 @@ function SampleNextArrow(props) {
       className={className}
       style={{
         ...style,
-        display: 'block',
-        background: 'transparent',
+        display: "block",
+        background: "transparent",
       }}
       onClick={onClick}
     />
@@ -38,9 +38,9 @@ function SamplePrevArrow(props) {
       className={className}
       style={{
         ...style,
-        display: 'block',
-        background: 'transparent',
-        marginRight: '20px',
+        display: "block",
+        background: "transparent",
+        marginRight: "20px",
       }}
       onClick={onClick}
     />
@@ -55,7 +55,7 @@ const AirlinesList = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: false,
+    autoplay: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -120,14 +120,14 @@ const AirlinesList = () => {
       component="div"
       maxWidth="xl"
       sx={{
-        textAlign: 'center',
-        marginTop: { xs: '100px', md: '400px', lg: '300px', xl: '160px' },
-        width: { xs: '88%' },
+        textAlign: "center",
+        marginTop: { xs: "100px", md: "400px", lg: "300px", xl: "160px" },
+        width: { xs: "88%" },
       }}
     >
       <Typography
         component="h1"
-        sx={{ fontSize: '17px', fontWeight: 'bold', color: '#003566', py: 2 }}
+        sx={{ fontSize: "17px", fontWeight: "bold", color: "#003566", py: 2 }}
       >
         Our Most Popular Airlinr Partners
       </Typography>

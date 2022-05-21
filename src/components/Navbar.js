@@ -1,21 +1,21 @@
-import * as React from 'react';
-import { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from "react";
+import { useState } from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
 
 // images
-import logo from '../assets/images/logo.png';
+import logo from "../assets/images/logo.png";
 
-const pages = ['Home', 'Contact Us', 'About Us'];
-const setting = ['Regester Now', 'Sign in'];
+const pages = ["Home", "Contact Us", "About Us"];
+const setting = ["Regester Now", "Sign in"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -29,23 +29,27 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <Container>
-      <AppBar position="static" color="transparent" sx={{ boxShadow: 'none',py:2 }}>
+    <Container maxWidth="xl">
+      <AppBar
+        position="static"
+        color="transparent"
+        sx={{ boxShadow: "none", py: 2 }}
+      >
         <Container maxWidth="xl">
-          <Toolbar disableGutters sx={{ display: 'flex' }}>
+          <Toolbar disableGutters sx={{ display: "flex" }}>
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{
-                mr: { md: '60px', lg: '100px' },
-                display: { xs: 'flex' },
-                fontFamily: 'monospace',
+                mr: { md: "60px", lg: "100px" },
+                display: { xs: "flex" },
+                fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-                width: { xs: '100%', md: 'auto' },
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+                width: { xs: "100%", md: "auto" },
               }}
             >
               <Box
@@ -54,16 +58,16 @@ const ResponsiveAppBar = () => {
                 alt="fly fair international logo"
                 width="100px"
                 height="40px"
-                sx={{ paddingLeft: { xs: 0, sm: '' } }}
+                sx={{ paddingLeft: { xs: 0, sm: "" } }}
               />
             </Typography>
 
             <Box
               sx={{
                 flexGrow: 1,
-                justifyContent: 'end',
-                display: { xs: 'flex', md: 'none' },
-                width: '100%',
+                justifyContent: "end",
+                display: { xs: "flex", md: "none" },
+                width: "100%",
               }}
             >
               <IconButton
@@ -75,25 +79,25 @@ const ResponsiveAppBar = () => {
                 color="inherit"
                 sx={{
                   borderRadius: 1,
-                  padding: '5px 10px',
-                  fontSize: 'px',
-                  marginRight: '-20px',
+                  padding: "5px 10px",
+                  fontSize: "px",
+                  marginRight: "-20px",
                 }}
               >
                 <MenuIcon />
               </IconButton>
               <Menu
-                sx={{ mt: '45px' }}
+                sx={{ mt: "45px" }}
                 id="menu-appbar"
                 anchorEl={anchorElNav}
                 anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
+                  vertical: "top",
+                  horizontal: "right",
                 }}
                 keepMounted
                 transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
+                  vertical: "top",
+                  horizontal: "right",
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleOpenUserMenu}
@@ -118,39 +122,39 @@ const ResponsiveAppBar = () => {
               href=""
               sx={{
                 mr: 2,
-                display: { xs: 'flex', md: 'none' },
+                display: { xs: "flex", md: "none" },
                 flexGrow: 1,
                 fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
               }}
             ></Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page, ind) => (
                 <Button
                   key={ind}
                   onClick={handleOpenUserMenu}
                   sx={{
                     px: 3,
-                    color: 'black',
-                    display: 'block',
-                    position: 'relative',
+                    color: "black",
+                    display: "block",
+                    position: "relative",
                   }}
-                  className={ind === 0 ? 'active-item' : ''}
+                  className={ind === 0 ? "active-item" : ""}
                 >
                   {page}
-                  {ind === 0 ? <span></span> : ''}
+                  {ind === 0 ? <span></span> : ""}
                 </Button>
               ))}
             </Box>
-            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <Button
                 onClick={handleOpenUserMenu}
                 sx={{
-                  color: 'black',
-                  display: 'block',
-                  border: '2px solid  #003566',
+                  color: "black",
+                  display: "block",
+                  border: "2px solid  #003566",
                   mx: 1,
                   px: {},
                 }}
@@ -161,11 +165,11 @@ const ResponsiveAppBar = () => {
               <Button
                 onClick={handleOpenUserMenu}
                 sx={{
-                  color: 'black',
-                  display: 'block',
-                  border: '2px solid  #003566',
+                  color: "black",
+                  display: "block",
+                  border: "2px solid  #003566",
                   mx: 1,
-                  px: '20px',
+                  px: "20px",
                 }}
                 className="sign-button"
               >
