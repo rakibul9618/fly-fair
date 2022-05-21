@@ -173,7 +173,7 @@ const ResponsiveAppBar = () => {
                   px: "20px",
                   textTransform: "none",
                 }}
-                className="sign-button"
+                className="sign-button active"
               >
                 Sign in
               </Button>
