@@ -1,3 +1,6 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -42,11 +45,10 @@ body {
   height: 80px !important;
 }
 
-.carousel-div {
-  display: grid !important;
-  place-items: center;
+.carousel-div .carousel-img {
+  width: 250px;
+  margin: 0 auto;
 }
-
 .slick-prev:before {
   content: url("./assets/images/angle-left-solid.svg");
   background-size: 10px 20px;
@@ -69,5 +71,4 @@ body {
 }
 
 .slide img {
-  width: 300px !;
 }

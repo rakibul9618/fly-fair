@@ -1,10 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-
-// Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 // images
 import c1 from "../assets/images/c1.png";
 import c2 from "../assets/images/c2.png";
@@ -55,7 +50,7 @@ const AirlinesList = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: true,
+    autoplay: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -68,7 +63,7 @@ const AirlinesList = () => {
         },
       },
       {
-        breakpoint: 1200,
+        breakpoint: 1500,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 2,
@@ -76,7 +71,7 @@ const AirlinesList = () => {
         },
       },
       {
-        breakpoint: 860,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
@@ -84,14 +79,14 @@ const AirlinesList = () => {
         },
       },
       {
-        breakpoint: 650,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 460,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -99,6 +94,7 @@ const AirlinesList = () => {
       },
     ],
   };
+
   return (
     <Container
       component="div"
