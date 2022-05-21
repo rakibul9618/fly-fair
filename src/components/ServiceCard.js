@@ -1,17 +1,17 @@
-import React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
 
 const ServiceCard = ({ data }) => {
   return (
     <Card
       sx={{
-        maxWidth: { xs: 275 },
-        margin: '20px 10px',
-        boxShadow: 'none',
+        maxWidth: { xs: 275, md: 370, lg: 268, xl: 275 },
+        margin: "20px 10px",
+        boxShadow: "none",
       }}
     >
       <CardActionArea>
@@ -19,7 +19,7 @@ const ServiceCard = ({ data }) => {
           component="img"
           image={data.img}
           alt="green iguana"
-          sx={{ width: '100%' }}
+          sx={{ width: "100%" }}
         />
         <CardContent>
           <Typography
@@ -27,8 +27,10 @@ const ServiceCard = ({ data }) => {
             variant="h5"
             component="div"
             sx={{
-              textAlign: 'center',
-              fontSize: '24',
+              textAlign: "center",
+              fontSize: "24",
+              fontWeight: "700",
+              marginTop: "5px",
             }}
           >
             {data.header}
@@ -37,8 +39,8 @@ const ServiceCard = ({ data }) => {
             variant="body2"
             color="text.secondary"
             sx={{
-              textAlign: 'center',
-              fontSize: '16',
+              textAlign: "center",
+              fontSize: "16px",
             }}
           >
             {data.para}

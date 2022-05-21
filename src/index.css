@@ -7,12 +7,13 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 
 .active-item {
   color: #003566 !important;
@@ -38,14 +39,6 @@ body {
   overflow-x: auto;
 }
 
-.ceo-container {
-  padding: 0 !important ;
-}
-.ceo-desk {
-  background-image: url('./assets/images/ceoDesk.png');
-  width: 100%;
-}
-
 
 .slick-slider {
   height: 80px !important;
@@ -54,11 +47,10 @@ body {
 .carousel-div {
   display: grid !important;
   place-items: center;
-
 }
 
 .slick-prev:before {
-  content: url('./assets/images/angle-left-solid.svg');
+  content: url("./assets/images/angle-left-solid.svg");
   background-size: 10px 20px;
   display: inline-block;
   width: 14px;
@@ -66,7 +58,7 @@ body {
 }
 
 .slick-next:before {
-  content: url('./assets/images/angle-right-solid.svg');
+  content: url("./assets/images/angle-right-solid.svg");
   background-size: 10px 20px;
   display: inline-block;
   width: 14px;

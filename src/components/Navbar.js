@@ -153,6 +153,7 @@ const ResponsiveAppBar = () => {
                 onClick={handleOpenUserMenu}
                 sx={{
                   color: "black",
+                  textTransform: "none",
                   display: "block",
                   border: "2px solid  #003566",
                   mx: 1,
@@ -170,6 +171,7 @@ const ResponsiveAppBar = () => {
                   border: "2px solid  #003566",
                   mx: 1,
                   px: "20px",
+                  textTransform: "none",
                 }}
                 className="sign-button"
               >

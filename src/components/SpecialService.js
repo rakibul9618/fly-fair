@@ -1,20 +1,21 @@
-import React from 'react';
-import { Box, Container } from '@mui/system';
-import { Button, Typography } from '@mui/material';
-import styled from '@emotion/styled';
+import React from "react";
+import { Box, Container } from "@mui/system";
+import { Button, Typography } from "@mui/material";
+import styled from "@emotion/styled";
 
 // images
-import ticketImg from '../assets/images/ticketImg.png';
+import ticketImg from "../assets/images/ticketImg.png";
 
 const GetTicket = styled(Button)({
-  background: '#003566',
-  color: 'white',
-  fontWeight: '600',
-  fontSize: '15px',
-  padding: '10px 35px',
-  '&:hover': {
-    backgroundColor: '#198754',
-    color: 'white',
+  background: "#003566",
+  color: "white",
+  fontWeight: "500",
+  fontSize: "20px",
+  padding: "10px 35px",
+  textTransform: "none",
+  "&:hover": {
+    backgroundColor: "#198754",
+    color: "white",
   },
 });
 
@@ -23,52 +24,63 @@ const SpecialService = () => {
     <Container
       maxWidth="xl"
       sx={{
-        display: 'flex',
-        flexWrap: { xs: 'wrap', lg: 'nowrap' },
-        justifyContent: { xs: 'center', md: 'space-between' },
-        alignItems: 'center',
+        display: "flex",
+        flexWrap: { xs: "wrap", lg: "nowrap" },
+        justifyContent: { xs: "center", md: "space-between" },
+        alignItems: "center",
       }}
     >
       <Box
         component="div"
         sx={{
-          width: { xs: '100%', md: '48%' },
-          px: '20px',
+          width: { xs: "100%", md: "48%" },
+          paddingLeft: "20px",
           marginBottom: 8,
-          textAlign: { xs: 'center', md: 'start' },
+          textAlign: { xs: "center", md: "start" },
         }}
       >
         <Box
           sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: { xs: 'center', md: 'start' },
+            display: "flex",
+            alignItems: "center",
+            justifyContent: { xs: "center", md: "start" },
           }}
         >
           <Box
             component="div"
             sx={{
-              height: '0px',
-              width: '26px',
-              border: '1px solid black',
-              background: 'black',
+              height: "0px",
+              width: "26px",
+              border: "1px solid black",
+              background: "black",
             }}
           ></Box>
-          <Typography sx={{ fontSize: '15px', paddingLeft: '8px' }}>
+          <Typography
+            sx={{
+              fontSize: "15px",
+              paddingLeft: "8px",
+              fontWeight: "600",
+              color: "#003566",
+            }}
+          >
             Our Special Service
           </Typography>
         </Box>
         <Typography
           component="h1"
           sx={{
-            fontSize: { xs: '22px', sm: '26px', md: '30px', lg: '40px' },
+            fontSize: { xs: "22px", sm: "26px", md: "30px", lg: "40px" },
             py: 2,
+            paddingRight: { md: "0px", lg: "100px", xl: "200px" },
+            fontWeight: "500",
           }}
         >
-          Buy Air Ticket With{' '}
-          <span style={{ fontWeight: 'bold' }}>Lowest Price.</span>
+          Buy Air Ticket With{" "}
+          <Box component="span" sx={{ fontWeight: "bold" }}>
+            Lowest Price.
+          </Box>
         </Typography>
-        <Typography sx={{ paddingBottom: '30px' }}>
+        <Typography sx={{ paddingBottom: "30px" }}>
           In publishing and graphic design, Lorem ipsum is a placeholder text
           commonly used to demonstrate the visual form of a document or a
           typeface without relying on meaningful content. Lorem ipsum may be
@@ -82,7 +94,7 @@ const SpecialService = () => {
         component="img"
         src={ticketImg}
         alt="a desktop"
-        sx={{ width: { xs: '90%', sm: '70%', md: '47%' } }}
+        sx={{ width: { xs: "90%", sm: "70%", md: "47%" } }}
       />
     </Container>
   );

@@ -62,32 +62,16 @@ const AirlinesList = () => {
       {
         breakpoint: 3000,
         settings: {
-          slidesToShow: 7,
-          slidesToScroll: 3,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 1460,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 3,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 1260,
-        settings: {
           slidesToShow: 5,
           slidesToScroll: 3,
           infinite: true,
         },
       },
       {
-        breakpoint: 1060,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
           infinite: true,
         },
       },
@@ -121,13 +105,19 @@ const AirlinesList = () => {
       maxWidth="xl"
       sx={{
         textAlign: "center",
-        marginTop: { xs: "100px", md: "400px", lg: "300px", xl: "160px" },
+        marginTop: { xs: "140px", md: "360px", lg: "280px", xl: "200px" },
         width: { xs: "88%" },
       }}
     >
       <Typography
         component="h1"
-        sx={{ fontSize: "17px", fontWeight: "bold", color: "#003566", py: 2 }}
+        sx={{
+          fontSize: "17px",
+          fontWeight: "bold",
+          color: "#003566",
+          paddingBottom: 5,
+          paddingTop: 2,
+        }}
       >
         Our Most Popular Airlinr Partners
       </Typography>

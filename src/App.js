@@ -4,7 +4,7 @@ import Form from './components/Form';
 import AirlinesList from './components/AirlinesList';
 import Service from './components/Service';
 import SpecialService from './components/SpecialService';
-import ChoiceUS from './components/ChoiceUS';
+import ChoiceUS from './components/ChoiceUs';
 import CeoDesk from './components/CeoDesk';
 import Footer from './components/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';

@@ -22,6 +22,8 @@ const RoundTrip = styled(Button)({
 
 const SearchFlight = styled(Button)({
   background: "#003566",
+  fontSize: "18px",
+  fontWeight: "300",
   color: "white",
   borderRadius: "124.5px",
   "&:hover": {
@@ -73,7 +75,7 @@ const Form = () => {
       maxWidth="xl"
       sx={{
         position: { xs: "relative", md: "absolute" },
-        top: { xs: "50px", md: "560px", xl: "518px" },
+        top: { xs: "50px", md: "560px", xl: "560px" },
         left: 0,
       }}
     >
@@ -88,7 +90,7 @@ const Form = () => {
           boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
           py: 3,
           position: "relative",
-          paddingBottom: "70px",
+          paddingBottom: "45px",
         }}
       >
         <Box
@@ -108,8 +110,10 @@ const Form = () => {
             variant="text"
             sx={{
               color: "white",
-              padding: { xs: "3px 4px", sm: "3px 25px",md: "3px 20px" },
+              padding: { xs: "3px 4px", sm: "3px 25px", md: "3px 20px" },
               fontSize: { xs: "13px", sm: "16px", md: "18px" },
+              fontWeight: "medium",
+              textTransform: "none",
             }}
             className="btn-hover"
           >
@@ -119,9 +123,10 @@ const Form = () => {
             sx={{
               padding: { xs: "3px 8px", sm: "3px 25px", md: "3px 40px" },
               fontSize: { xs: "13px", sm: "16px", md: "18px" },
+              fontWeight: "medium",
+              textTransform: "none",
               background: "#FFFF00",
               color: "black",
-              fontWeight: "600",
               borderRadius: "124.5px",
             }}
           >
@@ -133,6 +138,8 @@ const Form = () => {
               color: "white",
               padding: { xs: "3px 4px", sm: "3px 25px", md: "3px 20px" },
               fontSize: { xs: "13px", sm: "16px", md: "18px" },
+              fontWeight: "medium",
+              textTransform: "none",
             }}
           >
             Multi-City
@@ -167,11 +174,12 @@ const Form = () => {
         </Box>
         <SearchFlight
           sx={{
-            padding: { xs: "8px 20px", sm: "11px 30px" },
+            padding: { xs: "6px 20px", sm: "6px 35px" },
             display: "flex",
             alignItems: "center",
             position: "absolute",
             bottom: { xs: "-15px", sm: "-21px" },
+            textTransform: "none",
           }}
         >
           <Box
