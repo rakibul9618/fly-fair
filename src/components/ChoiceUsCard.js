@@ -5,9 +5,7 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 
 const HoverCard = styled(Card)({
-  "&:hover": {
-    
-  },
+  "&:hover": {},
 });
 
 const ChoiceUsCard = ({ data }) => {
@@ -20,13 +18,15 @@ const ChoiceUsCard = ({ data }) => {
         minHeight: data.minHeight,
         maxWidth: data.maxWidth,
         maxHeight: data.maxHeight,
+        height: { xl: data.maxHeight },
+        width: { xl: data.maxWidth },
         background: data.background,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexWrap: "wrap",
         borderRadius: "30px",
-        p: { xs: 2, sm: 1, lg: 2 },
+        p: { xs: 2, sm: 1, lg: 2, xl: 0 },
         marginTop: "16px",
         mx: "16px",
         boxShadow: "none",

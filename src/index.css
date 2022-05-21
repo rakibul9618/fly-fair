@@ -14,7 +14,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .active-item {
   color: #003566 !important;
   font-weight: 600 !important;
@@ -39,7 +38,6 @@ body {
   overflow-x: auto;
 }
 
-
 .slick-slider {
   height: 80px !important;
 }
@@ -63,4 +61,13 @@ body {
   display: inline-block;
   width: 14px;
   height: 26px;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 12%), 0 4px 8px rgb(0 0 0 / 6%);
+}
+
+.slide img {
+  width: 300px !;
 }

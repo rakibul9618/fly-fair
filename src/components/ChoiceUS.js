@@ -82,7 +82,7 @@ const ChoiceUS = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          width: { xs: "100%", md: "57%", lg: "46%" },
+          width: { xs: "100%",sm: '86%', md: "57%", lg: "46%" },
           flexWrap: "wrap",
         }}
       >
