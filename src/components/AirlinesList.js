@@ -50,7 +50,7 @@ const AirlinesList = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: false,
+    autoplay: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [

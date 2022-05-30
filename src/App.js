@@ -1,14 +1,15 @@
+import * as React from 'react';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Form from './components/Form';
 import AirlinesList from './components/AirlinesList';
 import Service from './components/Service';
 import SpecialService from './components/SpecialService';
-import ChoiceUS from './components/ChoiceUs';
 import CeoDesk from './components/CeoDesk';
 import Footer from './components/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Container } from '@mui/system';
+import Choice from './components/Choice';
 
 const theme = createTheme({
   typography: {
@@ -27,7 +28,7 @@ function App() {
       <AirlinesList />
       <Service />
       <SpecialService />
-      <ChoiceUS />
+      <Choice />
       <CeoDesk />
       <Footer />
     </ThemeProvider>
